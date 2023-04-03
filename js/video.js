@@ -23,15 +23,15 @@ document.querySelector("#pause").addEventListener("click", function() {
 	console.log("Pause Video");
 });
 document.querySelector("#slower").addEventListener("click", function() {
-	video.playbackRate *= 0.95
+	video.playbackRate *= 0.9
 	console.log("speed is " + video.playbackRate);
 });
 document.querySelector("#faster").addEventListener("click", function() {
-	video.playbackRate /= 0.95
+	video.playbackRate /= 0.9
 	console.log("Speed is " + video.playbackRate);
 });
 document.querySelector("#skip").addEventListener("click", function() {
-	video.currentTime += 15
+	video.currentTime += 10
 	console.log("Current time is " + video.currentTime);
 	if (video.currentTime >= video.duration)
 		video.currentTime = 0
@@ -39,8 +39,8 @@ document.querySelector("#skip").addEventListener("click", function() {
 });
 document.querySelector("#mute").addEventListener("click", function() {
 	if (video.muted == true) {
-		video.muted = false
 		console.log("Video unmuted")
+		video.muted = false
 		this.innerHTML = "Mute"
     }
 	else {
@@ -49,7 +49,7 @@ document.querySelector("#mute").addEventListener("click", function() {
 		this.innerHTMl = "Unmute"
 	}
 });
-document.querySelector("#slider").addEventListener("click", function (){
+document.querySelector("#slider").addEventListener("change", function (){
 	console.log("Current value is", video.volume)
 	video.volume = this.value/100
 	console.log("Current value is", video.volume)

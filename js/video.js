@@ -38,14 +38,14 @@ document.querySelector("#skip").addEventListener("click", function() {
 	console.log("current time is " + video.currentTime);
 });
 document.querySelector("#mute").addEventListener("click", function() {
-	if (video.muted == true) {
-		console.log("Video unmuted")
+	if (video.muted == true){
+		console.log("unmute")
 		video.muted = false
 		this.innerHTML = "Mute"
     }
-	else {
+	else{
 		video.muted = true
-		console.log("Video muted")
+		console.log("mute")
 		this.innerHTMl = "Unmute"
 	}
 });

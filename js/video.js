@@ -62,7 +62,7 @@ document.querySelector("#vintage").addEventListener("click", function (){
 	video.classList.add("oldschool")
 });
 document.querySelector("#orig").addEventListener("click", function (){
-	video.classList.remove("oldschool")
+	video.classList.remove("oldSchool")
 });
 
 
